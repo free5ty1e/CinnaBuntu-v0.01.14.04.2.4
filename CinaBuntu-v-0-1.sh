@@ -25,7 +25,7 @@ sudo apt-get update && sudo apt-get install cinnamon
 ### S0FTWARZ ... yes that is meant to be a joke (kinda)
 #Utilities
 echo "Installing Utilities"
-sudo apt-get -y install filezilla transmission recordmydesktop p7zip  
+sudo apt-get -y install filezilla transmission recordmydesktop p7zip cairo-dock
 
 #Virtualization
 sudo apt-get -y install wine playonlinux virtualbox
@@ -49,3 +49,7 @@ sudo apt-get -y install wireshark pbnj etherape aircrack-ng speedometer nload hy
 # Multimedia
 echo "Installing Music Production and Mastering Software"
 sudo apt-get -y install ardour audacity lmms 
+
+### Removing the stuff I dont use and have just replaced
+echo "Removing unused software"
+sudo apt-get -y remove firefox
