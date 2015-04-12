@@ -1,12 +1,15 @@
 # CinnaBuntu (Alpha)
-### Version 0.01.14.04.2.4
+### Version 0.02.14.04.2.4
+---  
 
-This is to install Alpha CodeName:CinnaBuntu v0.01.14.04.2.4
-A custom build to be added to any Ubuntu 14.04 (or similar Debian)
-To add Cinnamon 2.4 Desktop capability and custom programs and configs
+Use this install on a fresh Ubuntu Linux 14.04 (or similar)
+to add Cinnamon 2.4, my recommended packages, 
+remove no longer essential packages, and do other minor configs  
 
+
+---
 Version number explination:
-0.01 | 14.04 | 2.4
+0.02 | 14.04 | 2.4
 
 First set is this script verion (0.01)
 Second set is for Ubuntu version (14.04)
