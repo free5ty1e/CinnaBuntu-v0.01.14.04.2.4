@@ -5,18 +5,25 @@
 # To add Cinnamon 2.4 Desktop capability and custom programs and configs
 ### Circuit Static 
 
+# Are you clean and ready?
+sudo apt-get update
+
+
+# What the Cow Say
+sudo apt-get install cowsay
+
 # Because I want music for the rest of this
-echo "Installing VLC"
+cowsay -f three-eyes "Installing VLC"
 sudo apt-get -y install vlc
 
 # Give in to the Google SSO and the Cloud (Butt)
-echo "Installing Google Chrome"
+cowsay -f kosh "Installing Google Chrome"
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 sudo apt-get update && sudo apt-get -y install google-chrome-stable
 
 # Now with Cimmanon (tm)
-echo "Adding Cinnamon 2.4 to Ubuntu 14.04 LTS"
+cowsay -f vader "Adding Cinnamon 2.4 to Ubuntu 14.04 LTS"
 sudo add-apt-repository ppa:gwendal-lebihan-dev/cinnamon-nightly
 sudo apt-get update && sudo apt-get install cinnamon
 
@@ -24,30 +31,38 @@ sudo apt-get update && sudo apt-get install cinnamon
 
 ### S0FTWARZ ... yes that is meant to be a joke (kinda)
 #Utilities
-echo "Installing Utilities"
+cowsay "Installing Utilities"
 sudo apt-get -y install filezilla transmission recordmydesktop p7zip cairo-dock
 
 #Virtualization
+cowsay "Installing Virtualization Software"
 sudo apt-get -y install wine playonlinux virtualbox
 
 # Programming
-echo "Installing Programming Software"
+cowsay "Installing Programming Software"
 sudo apt-get install -y install git
 
 # Graphics
-echo "Installing Graphics Manipulators"
+cowsay "Installing Graphics Manipulators"
 sudo apt-get -y install blender gimp shutter
 
 # Gaming
-echo "Installing Gaming Goodness"
+cowsay "Installing Gaming Goodness"
 sudo apt-get -y install xboxdrv assaultcube dosbox zsnes
+# Controllers
+cowsay -f tux "Installing Joystick Controllers"
+sudo apt-get install libusb-dev libusb-0.1-4 xserver-xorg-input-joystick
+sudo add-apt-repository ppa:falk-t-j/qtsixa
+sudo apt-get update
+sudo apt-get install qtsixa
+sudo apt-get install sixad
 
 # Networking
-echo "Installing Network and Security Tools"
+cowsay "Installing Network and Security Tools"
 sudo apt-get -y install wireshark pbnj etherape aircrack-ng speedometer nload hydra fail2ban putty
 
 # Multimedia
-echo "Installing Music Production and Mastering Software"
+cowsay "Installing Music Production and Mastering Software"
 sudo apt-get -y install ardour audacity lmms 
 
 ### Removing the stuff I dont use and have just replaced
