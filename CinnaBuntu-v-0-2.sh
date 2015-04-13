@@ -1,13 +1,9 @@
 #!/bin/bash
 
-# This is to install Alpha CodeName:CinnaBuntu v0.01.14.04.2.4
-# A custom build to be added to any Ubuntu 14.04 (or similar Debian)
-# To add Cinnamon 2.4 Desktop capability and custom programs and configs
+# Install Alpha CodeName:CinnaBuntu v0.02...
+# A custom build for Ubuntu 14.04 (or similar Debian)
+# Add Cinnamon 2.4 desktop & other goodies
 ### Circuit Static 
-
-# Are you clean and ready?
-sudo apt-get update
-
 
 # What the Cow Say
 sudo apt-get install cowsay
@@ -16,20 +12,27 @@ sudo apt-get install cowsay
 cowsay -f three-eyes "Installing VLC"
 sudo apt-get -y install vlc
 
-# Give in to the Google SSO and the Cloud (Butt)
-cowsay -f kosh "Installing Google Chrome"
+### Add more sources
+# Google Chrome Stable Repo
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-sudo apt-get update && sudo apt-get -y install google-chrome-stable
+# Video Game Controller Repos
+sudo add-apt-repository ppa:falk-t-j/qtsixa
+
+# Update from new and existing sources
+sudo apt-get update
+
+# Now I will want Chrome to surf the net for the rest of the install
+cowsay -f kosh "Installing Google Chrome"
+sudo apt-get -y install google-chrome-stable
 
 # Now with Cimmanon (tm)
 cowsay -f vader "Adding Cinnamon 2.4 to Ubuntu 14.04 LTS"
 sudo add-apt-repository ppa:gwendal-lebihan-dev/cinnamon-nightly
 sudo apt-get update && sudo apt-get install cinnamon
 
-### Reminder to ask to continue or reboot into Cinnamon
+### S0FTWARE ###
 
-### S0FTWARZ ... yes that is meant to be a joke (kinda)
 #Utilities
 cowsay "Installing Utilities"
 sudo apt-get -y install filezilla transmission recordmydesktop p7zip cairo-dock
@@ -40,22 +43,18 @@ sudo apt-get -y install wine playonlinux virtualbox
 
 # Programming
 cowsay "Installing Programming Software"
-sudo apt-get install -y install git
+sudo apt-get install -y install git python
 
 # Graphics
 cowsay "Installing Graphics Manipulators"
 sudo apt-get -y install blender gimp shutter
 
 # Gaming
-cowsay "Installing Gaming Goodness"
-sudo apt-get -y install xboxdrv assaultcube dosbox zsnes
+cowsay -s "Installing Games and Emulators"
+sudo apt-get -y install assaultcube dosbox zsnes
 # Controllers
 cowsay -f tux "Installing Joystick Controllers"
-sudo apt-get install libusb-dev libusb-0.1-4 xserver-xorg-input-joystick
-sudo add-apt-repository ppa:falk-t-j/qtsixa
-sudo apt-get update
-sudo apt-get install qtsixa
-sudo apt-get install sixad
+sudo apt-get install libusb-dev libusb-0.1-4 xserver-xorg-input-joystick qtsixa sixad xboxdrv
 
 # Networking
 cowsay "Installing Network and Security Tools"
